@@ -1,34 +1,21 @@
-import useState  from "./playground/useState/useState";
-import LoginPage from "./pages/LoginPage/LoginPage.css";
-import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
-function LoginPage(){
-    // codigo de js
+function Home (){
 
-    const [username, setUsername] = useState('');
-
-
-    function handLoginClick(){
-        if(username.trim() === ''){
-            Swal.fire("Por favor ingrese un nombre valido");
-        }
-        else{
-            Swal.fire(username);
-    }
-    }
-    // etiquetas de HTML
-    return (
-        <div className='login-container'>
-            <h2>Ejercicio de prueba</h2>
-            <input type="text" 
-                placeholder='escribe tu nombre de usuario'
-                value={username}
-                onChange={(e) =>setUsername(e.target.value)}
-            />
-            <button onClick={handLoginClick}>Iniciar Sesion</button>
-                
+    return(
+        <div>
+            <h1>HOME</h1>
+            <Link to="/register">
+                <button>IR A REGISTRO</button>
+            </Link>
+            <Link to="/forgot">
+                <button>OLVIDE MI CONTRASEÑA</button>
+            </Link>
+            
         </div>
-    );
-}
 
-export default LoginPage;
+
+    );
+
+}
+export default Home;

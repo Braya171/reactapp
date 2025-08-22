@@ -1,4 +1,4 @@
-import  useState  from "./playground/useState/useState";
+import  useState  from "./useState";
 
 function useStateContador(){
 
@@ -16,6 +16,9 @@ function useStateContador(){
             <h2>Valor del contador = {contador}</h2>
             <button onClick={aumentar}>Aumentar</button>
             <button onClick={disminuir}>Disminuir</button>
+            <link to="/hooks">
+            <button>IR A HOOKS GENERAL</button>
+            </link>
         </div>
 
     );
